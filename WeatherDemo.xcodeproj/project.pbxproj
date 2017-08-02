@@ -76,6 +76,8 @@
 		B76048311F32153E00AB84A5 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		B76048341F32153E00AB84A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		B76048361F32153E00AB84A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B760483F1F324DF600AB84A5 /* WeatherDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WeatherDemo.entitlements; sourceTree = "<group>"; };
+		B76048401F324E6B00AB84A5 /* Weather Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Weather Widget.entitlements"; sourceTree = "<group>"; };
 		F4CB3D151DC1D121008A85BF /* WeatherDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CB3D181DC1D121008A85BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4CB3D1D1DC1D121008A85BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		B76048301F32153E00AB84A5 /* Weather Widget */ = {
 			isa = PBXGroup;
 			children = (
+				B76048401F324E6B00AB84A5 /* Weather Widget.entitlements */,
 				B76048311F32153E00AB84A5 /* TodayViewController.swift */,
 				B76048331F32153E00AB84A5 /* MainInterface.storyboard */,
 				B76048361F32153E00AB84A5 /* Info.plist */,
@@ -169,6 +172,7 @@
 		F4CB3D171DC1D121008A85BF /* WeatherDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B760483F1F324DF600AB84A5 /* WeatherDemo.entitlements */,
 				F4CB3D181DC1D121008A85BF /* AppDelegate.swift */,
 				F4CB3D1C1DC1D121008A85BF /* Main.storyboard */,
 				F4CB3D1F1DC1D121008A85BF /* Assets.xcassets */,
@@ -267,11 +271,21 @@
 					B760482B1F32153E00AB84A5 = {
 						CreatedOnToolsVersion = 9.0;
 						DevelopmentTeam = X3563PB3YJ;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					F4CB3D141DC1D121008A85BF = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = X3563PB3YJ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -477,13 +491,14 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "Weather Widget/Weather Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = X3563PB3YJ;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Weather Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.appcoda.WeatherDemo.Weather-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.giraffe.WeatherDemo.Weather-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -504,13 +519,14 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "Weather Widget/Weather Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = X3563PB3YJ;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Weather Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.appcoda.WeatherDemo.Weather-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.giraffe.WeatherDemo.Weather-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -616,11 +632,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WeatherDemo/WeatherDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = X3563PB3YJ;
 				INFOPLIST_FILE = WeatherDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.WeatherDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giraffe.WeatherDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -631,11 +648,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WeatherDemo/WeatherDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = X3563PB3YJ;
 				INFOPLIST_FILE = WeatherDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.WeatherDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giraffe.WeatherDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

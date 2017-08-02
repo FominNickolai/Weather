@@ -17,6 +17,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet weak var tmperatureLabel: UILabel!
     
     var location = "Paris, France"
+    var defaults = UserDefaults(suiteName: "group.com.giraffe.weatherapp")!
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // If there's no update required, use NCUpdateResult.NoData
         // If there's an update, use NCUpdateResult.NewData
         
+        //Get the location from defaults
+        if let defaultLocation = defaults.value(forKey: "location") as? String {
+            location = defaultLocation
+        }
         
         cityLabel.text = location
         WeatherService.sharedWeatherService().getCurrentWeather(location: location) { (data) in

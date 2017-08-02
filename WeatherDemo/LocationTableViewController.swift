@@ -13,6 +13,8 @@ class LocationTableViewController: UITableViewController {
     let locations = ["Paris, France", "Kyoto, Japan", "Sydney, Australia", "Seattle, U.S.", "New York, U.S.", "Hong Kong, Hong Kong", "Taipei, Taiwan", "London, U.K.", "Vancouver, Canada"]
     var selectedLocation = "Paris, France"
     
+    var defaults = UserDefaults(suiteName: "group.com.giraffe.weatherapp")!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,6 +52,7 @@ class LocationTableViewController: UITableViewController {
         cell?.accessoryType = .checkmark
         if let location = cell?.textLabel?.text {
             selectedLocation = location
+            defaults.setValue(selectedLocation, forKey: "location")
         }
         
         tableView.reloadData()
